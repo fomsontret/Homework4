@@ -38,8 +38,9 @@ public class Main {
                 case 3:
                     int result1 = taxEarningsNotMinusSpendings(earnings);
                     int result2 = taxEarningsMinusSpendings(earnings,spendings);
-
-                    if (result2 > result1) {
+                    if (result2 == result1) {
+                        System.out.println("Можете выбрать любую систему налогообложения");
+                    } else if (result2 > result1) {
                         System.out.println("Мы советуем вам УСН доходы");
                         System.out.println("Ваш налог составит: " + result1);
                         System.out.println("Налог на другой системе: " + result2);
